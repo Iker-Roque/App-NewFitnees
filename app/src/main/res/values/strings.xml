@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Newfitnes</string>
+    <string name="Inicio">Empezar</string>
+    <string name="Derechos">2025 Todos los derechos reservados</string>
+    <string name="title_activity_incio">incioActivity</string>
+    <string name="title_activity_miembros">MiembrosActivity</string>
+    <string name="title_activity_entrenadores">EntrenadoresActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_suscripcion">SuscripcionActivity</string>
+    <string name="title_activity_usuario">UsuarioActivity</string>
+    <string name="title_activity_user_data">UserDataActivity</string>
+    <string name="title_activity_user_insert">UserInsertActivity</string>
+    <string name="title_activity_rutinas">RutinasActivity</string>
+</resources>
