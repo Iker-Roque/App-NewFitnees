@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.androidx.room.common.jvm)
     implementation(libs.androidx.room.runtime.android)
     implementation(libs.androidx.appcompat)
+    implementation(libs.car.ui.lib)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,16 +68,16 @@ dependencies {
     kapt(libs.androidx.room.compiler)
 
     //REtrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
 
     //Material3
-    implementation ("androidx.compose.material3:material3:1.1.2")
-    implementation ("androidx.compose.material:material-icons-extended:1.5.4")
+    implementation (libs.material3)
+    implementation (libs.androidx.material.icons.extended)
     //
     //imaagen
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(libs.coil.compose)
 
 }
 

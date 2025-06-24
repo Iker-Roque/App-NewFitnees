@@ -19,13 +19,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBox
-import androidx.compose.material.icons.filled.CardMembership
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.FitnessCenter
-import androidx.compose.material.icons.filled.Star
+
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -40,15 +34,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.example.newfitnes.content.MiembrosActivity
 import com.example.newfitnes.content.SuscripcionActivity
 import com.example.newfitnes.content.EntrenadoresActivity
 import com.example.newfitnes.content.RutinasActivity
@@ -56,6 +47,8 @@ import com.example.newfitnes.content.UserInsertActivity
 import com.example.newfitnes.content.UsuarioActivity
 import com.example.newfitnes.content.ui.theme.*
 import com.example.newfitnes.ui.theme.ui.theme.NewfitnesTheme
+import com.example.newfitnes.uimenu.MenuItem
+import com.example.newfitnes.uimenu.getMenuItems
 
 class HomeActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -86,11 +79,7 @@ class HomeActivity : ComponentActivity() {
 }
 
 // Data class para los elementos del menú
-data class MenuItem(
-    val title: String,
-    val icon: ImageVector,
-    val subtitle: String,
-)
+
 
 
 
@@ -249,6 +238,7 @@ fun MenuCard(
                 textAlign = TextAlign.Center,
                 color = TextSecondary
             )
+
         }
     }
 }
@@ -261,12 +251,3 @@ fun HomePreview() {
     }
 }
 
-// Función para obtener los items del menú (reutilizable)
-fun getMenuItems() = listOf(
-    MenuItem("Entrenadores", Icons.Default.AccountBox, "Elección Entrenadores"),
-    MenuItem("Suscripciones", Icons.Default.CardMembership, "Membresías VIP"),
-    MenuItem("Entrenamientos", Icons.Default.FitnessCenter, "Ejercicios y Rutinas"),
-    MenuItem("Usuario", Icons.Default.Person, "Perfil de Usuario"),
-    MenuItem("Rutinas", Icons.Default.Star, "Rutinas Personalizadas"),
-    MenuItem("Configuración", Icons.Default.Settings, "Ajustes del Sistema")
-)
