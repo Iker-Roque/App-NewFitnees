@@ -21,7 +21,7 @@ fun getMenuItems() = listOf(
     MenuItem("Entrenamientos", Icons.Default.FitnessCenter, "Ejercicios y Rutinas"),
     MenuItem("Usuario", Icons.Default.Person, "Perfil de Usuario"),
     MenuItem("Rutinas", Icons.Default.Star, "Rutinas Personalizadas"),
-    MenuItem("Configuración", Icons.Default.Settings, "Ajustes del Sistema"),
+    MenuItem("Sucursales", Icons.Default.MapsHomeWork, "Descubre nuestras Sucursales"),
     MenuItem("Nuevo apartado", Icons.Default.DeviceUnknown, "Sección en desarrollo"),
     MenuItem("Nuevo apartado", Icons.Default.Info, "Sección en desarrollo"),
     MenuItem("Nuevo apartado", Icons.Default.Info, "Sección en desarrollo"),

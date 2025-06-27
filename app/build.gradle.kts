@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.newfitnes"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -70,6 +70,11 @@ dependencies {
     //REtrofit
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+
+    //implementacion de google
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")
+
 
 
     //Material3

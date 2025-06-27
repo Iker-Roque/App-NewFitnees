@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
-
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,6 +42,7 @@ import coil.compose.AsyncImage
 import com.example.newfitnes.content.SuscripcionActivity
 import com.example.newfitnes.content.EntrenadoresActivity
 import com.example.newfitnes.content.RutinasActivity
+import com.example.newfitnes.content.UbicacionesActivity
 import com.example.newfitnes.content.UserInsertActivity
 import com.example.newfitnes.content.UsuarioActivity
 import com.example.newfitnes.content.ui.theme.*
@@ -74,6 +74,8 @@ class HomeActivity : ComponentActivity() {
             2 -> startActivity(Intent(this, RutinasActivity::class.java))
             3 -> startActivity(Intent(this, UsuarioActivity::class.java))
             4 -> startActivity(Intent(this, UserInsertActivity::class.java))
+            5 -> startActivity(Intent(this, UbicacionesActivity::class.java))
+
         }
     }
 }

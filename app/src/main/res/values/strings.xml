@@ -11,4 +11,5 @@
     <string name="title_activity_user_data">UserDataActivity</string>
     <string name="title_activity_user_insert">UserInsertActivity</string>
     <string name="title_activity_rutinas">RutinasActivity</string>
+    <string name="title_activity_ubicaciones">UbicacionesActivity</string>
 </resources>

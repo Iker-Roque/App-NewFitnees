@@ -51,7 +51,7 @@ class UserInsertActivity : ComponentActivity() {
                 ) { innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding).padding(32.dp)) {
                         Text(
-                            text = "Nuevo usuario",
+                            text = "Agregar Nueva Rutina",
                             style = MaterialTheme.typography.headlineLarge,
                             color = PrimaryGreen
                         )
@@ -253,7 +253,7 @@ class UserInsertActivity : ComponentActivity() {
                                 contentColor = TextPrimary
                             )
                         ) {
-                            Text(text = "Ver Usuarios Guardados")
+                            Text(text = "Ver Rutinas Registradas")
                         }
                     }
                 }

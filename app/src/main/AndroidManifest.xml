@@ -15,6 +15,11 @@
         android:theme="@style/Theme.Newfitnes"
         tools:targetApi="31">
         <activity
+            android:name=".content.UbicacionesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ubicaciones"
+            android:theme="@style/Theme.Newfitnes" />
+        <activity
             android:name=".content.RutinasActivity"
             android:exported="false"
             android:label="@string/title_activity_rutinas"
