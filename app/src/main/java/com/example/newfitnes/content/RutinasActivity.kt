@@ -3,6 +3,7 @@ package com.example.newfitnes.content
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,6 +16,7 @@ import com.example.newfitnes.api.Rutina
 import com.example.newfitnes.api.ApiServices
 import com.example.newfitnes.ui.theme.ui.theme.NewfitnesTheme
 import com.example.newfitnes.ui.theme.ui.theme.*
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,6 +27,9 @@ class RutinasActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+
+
         setContent {
             NewfitnesTheme {
                 RutinasScreen()

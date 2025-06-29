@@ -12,4 +12,6 @@
     <string name="title_activity_user_insert">UserInsertActivity</string>
     <string name="title_activity_rutinas">RutinasActivity</string>
     <string name="title_activity_ubicaciones">UbicacionesActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
 </resources>

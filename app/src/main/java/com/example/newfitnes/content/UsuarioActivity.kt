@@ -5,6 +5,7 @@ package com.example.newfitnes.content
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -29,6 +30,7 @@ import com.example.newfitnes.content.ui.theme.*
 class UsuarioActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             NewfitnesTheme {
                 ProfileScreen()
@@ -45,15 +47,30 @@ fun ProfileScreen() {
             .fillMaxSize()
             .background(BackgroundDark)
     ) {
-        // Top Bar
+        // Top Bar - Actualizada con el mismo estilo que UbicacionesActivity
         TopAppBar(
+            colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = BackgroundDark,
+                titleContentColor = TextPrimary,
+            ),
             title = {
-                Text(
-                    text = "Profile",
-                    color = TextPrimary,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        Icons.Filled.Person,
+                        contentDescription = null,
+                        tint = PrimaryGreen,
+                        modifier = Modifier.size(28.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        "Profile",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                }
             },
             actions = {
                 IconButton(onClick = { /* Acción de compartir */ }) {
@@ -63,10 +80,7 @@ fun ProfileScreen() {
                         tint = TextPrimary
                     )
                 }
-            },
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = BackgroundDark
-            )
+            }
         )
 
         LazyColumn(

@@ -8,6 +8,6 @@ interface ApiServices {
     @GET("rutinas.php")
     fun getRutinas(): Call<List<Rutina>>
 
-    @GET("fitnes-api/api/ubicaciones.php")
+    @GET("ubicacion.php")
     fun getUbicaciones(): Call<List<Ubicacion>>
 }

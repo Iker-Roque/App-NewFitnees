@@ -75,6 +75,13 @@ dependencies {
 
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")
 
+    //barra de navegacion
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+
+    //Gogle Mpas
+    // Google Maps
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
 
 
     //Material3
