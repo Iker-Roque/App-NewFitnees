@@ -16,7 +16,7 @@ import com.example.newfitnes.api.Rutina
 import com.example.newfitnes.api.ApiServices
 import com.example.newfitnes.ui.theme.ui.theme.NewfitnesTheme
 import com.example.newfitnes.ui.theme.ui.theme.*
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
+
 
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
