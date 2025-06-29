@@ -12,6 +12,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.unit.sp
 import com.example.newfitnes.api.Rutina
 import com.example.newfitnes.api.ApiServices
 import com.example.newfitnes.ui.theme.ui.theme.NewfitnesTheme
@@ -83,13 +84,21 @@ class RutinasActivity : ComponentActivity() {
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             CircularProgressIndicator(
-                                color = PrimaryGreen
+                                color = PrimaryGreen,
+                                modifier = Modifier.size(60.dp),
+                                strokeWidth = 4.dp
                             )
                             Spacer(modifier = Modifier.height(16.dp))
                             Text(
                                 text = "Cargando rutinas...",
                                 color = TextSecondary,
                                 style = MaterialTheme.typography.bodyMedium
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Por favor espera un momento",
+                                color = TextSecondary,
+                                fontSize = 14.sp
                             )
                         }
                     }
@@ -117,13 +126,18 @@ class RutinasActivity : ComponentActivity() {
                     }
                 }
                 else -> {
-                    Column {
-                        // Título de la pantalla
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 32.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+
                         Text(
                             text = "Rutinas de Ejercicio",
                             style = MaterialTheme.typography.headlineLarge,
                             color = PrimaryGreen,
-                            modifier = Modifier.padding(16.dp)
+                            modifier = Modifier.padding(30.dp)
                         )
 
                         LazyColumn(

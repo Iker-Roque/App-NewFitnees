@@ -33,7 +33,9 @@ class UsuarioActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewfitnesTheme {
-                ProfileScreen()
+                ProfileScreen(
+                    onBackClick = {finish()}
+                )
             }
         }
     }
@@ -41,7 +43,9 @@ class UsuarioActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(
+    onBackClick: () -> Unit = {}
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -72,6 +76,16 @@ fun ProfileScreen() {
                     )
                 }
             },
+            navigationIcon = {
+                IconButton(onClick = onBackClick) {
+                    Icon(
+                        Icons.Filled.ArrowBackIosNew,
+                        contentDescription = "Volver",
+                        tint = TextPrimary
+                    )
+                }
+            },
+
             actions = {
                 IconButton(onClick = { /* Acción de compartir */ }) {
                     Icon(
