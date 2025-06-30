@@ -78,10 +78,14 @@ dependencies {
     //barra de navegacion
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
 
-    //Gogle Mpas
-    // Google Maps
-    implementation ("com.google.android.gms:play-services-maps:18.1.0")
-    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    // Google Maps Compose
+    implementation ("com.google.maps.android:maps-compose:4.3.3")
+    implementation ("com.google.android.gms:play-services-maps:19.2.0")
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
+
+
+
+
 
 
     //Material3

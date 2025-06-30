@@ -68,7 +68,7 @@ class UbicacionesActivity : ComponentActivity() {
                                     Icon(
                                         Icons.Filled.ArrowBackIosNew,
                                         contentDescription = "Volver",
-                                        tint = TextPrimary
+                                        tint = PrimaryGreen
                                     )
                                 }
                             }

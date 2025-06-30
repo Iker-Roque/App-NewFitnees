@@ -122,7 +122,7 @@ fun EntrenadoresScreen(
                         Icon(
                             Icons.Filled.ArrowBackIosNew,
                             contentDescription = "Volver",
-                            tint = TextPrimary
+                            tint = PrimaryGreen
                         )
                     }
                 }

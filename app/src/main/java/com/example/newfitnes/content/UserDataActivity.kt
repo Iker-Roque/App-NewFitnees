@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,12 +13,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.LaunchedEffect
@@ -79,6 +83,26 @@ class UserDataActivity : ComponentActivity(){
                             color = PrimaryGreen,
                             modifier = Modifier.padding(bottom = 16.dp)
                         )
+
+                        // Botón para ver gráfica
+                        OutlinedButton(
+                            onClick = {
+                                val intent = android.content.Intent(this@UserDataActivity, ChartActivity::class.java)
+                                startActivity(intent)
+                            },
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                containerColor = SurfaceDark,
+                                contentColor = PrimaryGreen
+                            ),
+                            modifier = Modifier.padding(bottom = 16.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.BarChart,
+                                contentDescription = "Ver gráfica",
+                                modifier = Modifier.padding(end = 8.dp)
+                            )
+                            Text(text = "Ver Gráfica de Duración")
+                        }
 
                         if (userList.value.isEmpty()) {
                             Text(

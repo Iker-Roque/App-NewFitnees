@@ -14,4 +14,6 @@
     <string name="title_activity_ubicaciones">UbicacionesActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_mapa">MapaActivity</string>
+    <string name="title_activity_chart">ChartActivity</string>
 </resources>
