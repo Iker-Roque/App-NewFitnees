@@ -1,0 +1,26 @@
+USO DE RAMAS EN GIT - GUÍA RÁPIDA
+
+1. Ver en qué rama estás:
+   git branch
+
+2. Crear una nueva rama y cambiarte a ella:
+   git checkout -b nombre-rama
+
+3. Hacer tus cambios en esa rama.
+
+4. Guardar los cambios:
+   git add .
+   git commit -m "Descripción del cambio"
+
+5. Volver a la rama principal:
+   git checkout main
+
+6. Unir los cambios de la rama nueva a main:
+   git merge nombre-rama
+
+7. (Opcional) Borrar la rama cuando ya no se necesita:
+   git branch -d nombre-rama
+
+Notas:
+- Usá ramas para probar funciones sin afectar el proyecto principal.
+- Podés tener varias ramas para diferentes ideas o arreglos.

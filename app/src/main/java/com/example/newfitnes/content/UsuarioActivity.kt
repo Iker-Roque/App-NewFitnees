@@ -71,7 +71,7 @@ fun ProfileScreen(
                     Text(
                         "Profile",
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.titleMedium,
                         color = TextPrimary
                     )
                 }
@@ -189,7 +189,7 @@ fun ProfileSection() {
                     text = "Alex Cole",
                     color = TextPrimary,
                     fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium
+                    style = MaterialTheme.typography.labelMedium,
                 )
 
                 IconButton(
@@ -252,6 +252,7 @@ fun SettingsRow(
                 text = item.title,
                 color = TextPrimary,
                 fontSize = 16.sp,
+                style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.weight(1f)
             )
 
@@ -340,7 +341,7 @@ fun BottomNavItem(
                 text = label,
                 color = TextOnPrimary,
                 fontSize = 14.sp,
-                fontWeight = FontWeight.Medium
+                style = MaterialTheme.typography.titleLarge,
             )
         }
     } else {

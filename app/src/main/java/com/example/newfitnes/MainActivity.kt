@@ -62,12 +62,13 @@ fun ActivationScreen(
                         Text(
                             text = "NewFitnes",
                             fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.titleLarge,
                             color = TextPrimary
                         )
                         Text(
                             text = "SUI",
                             fontSize = 12.sp,
+                            style = MaterialTheme.typography.titleLarge,
                             color = PrimaryGreen,
                             letterSpacing = 2.sp
                         )
@@ -130,7 +131,7 @@ fun ActivationScreen(
             Text(
                 text = "Activate Entrenaz",
                 fontSize = 24.sp,
-                fontWeight = FontWeight.Medium,
+                style = MaterialTheme.typography.titleLarge,
                 color = TextPrimary,
                 textAlign = TextAlign.Center
             )
@@ -153,7 +154,7 @@ fun ActivationScreen(
                 Text(
                     text = "Inicio",
                     fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
+                    style = MaterialTheme.typography.labelLarge,
                     color = TextOnPrimary
                 )
             }
@@ -164,6 +165,7 @@ fun ActivationScreen(
             // Texto de copyright en la parte inferior
             Text(
                 text = "© 2024 NewFitnes - Todos los derechos reservados",
+                style = MaterialTheme.typography.titleLarge,
                 fontSize = 12.sp,
                 color = TextSecondary,
                 textAlign = TextAlign.Center,

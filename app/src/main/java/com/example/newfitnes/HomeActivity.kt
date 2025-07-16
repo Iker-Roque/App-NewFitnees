@@ -23,6 +23,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -104,7 +105,7 @@ fun HomeScreen(
                     Text(
                         text = "💪 NewFitnes",
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.Medium,
+                        style = MaterialTheme.typography.labelLarge,
                         color = TextPrimary
                     )
                 }
@@ -159,13 +160,13 @@ fun HomeScreen(
                         text = "Bienvenido a",
                         color = TextPrimary,
                         fontSize = 16.sp,
-                        fontWeight = FontWeight.Normal
+                        style = MaterialTheme.typography.titleLarge,
                     )
                     Text(
                         text = "NewFitnes Management",
                         color = PrimaryGreen,
                         fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold
+                        style = MaterialTheme.typography.titleLarge,
                     )
                 }
             }
@@ -228,7 +229,7 @@ fun MenuCard(
             Text(
                 text = menuItem.title,
                 fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold,
+                style = MaterialTheme.typography.displaySmall,
                 textAlign = TextAlign.Center,
                 color = TextPrimary
             )
@@ -236,7 +237,7 @@ fun MenuCard(
             Text(
                 text = menuItem.subtitle,
                 fontSize = 12.sp,
-                fontWeight = FontWeight.Normal,
+                style = MaterialTheme.typography.titleLarge,
                 textAlign = TextAlign.Center,
                 color = TextSecondary
             )

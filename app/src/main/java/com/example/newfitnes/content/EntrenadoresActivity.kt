@@ -112,7 +112,7 @@ fun EntrenadoresScreen(
                         Text(
                             "Entrenadores",
                             fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelMedium,
                             color = TextPrimary
                         )
                     }
@@ -206,7 +206,7 @@ fun EntrenadorCard(entrenador: Entrenador) {
                         text = entrenador.nombre,
                         color = TextPrimary,
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
+                        style = MaterialTheme.typography.titleMedium,
                     )
 
                     Spacer(modifier = Modifier.height(4.dp))
@@ -215,7 +215,7 @@ fun EntrenadorCard(entrenador: Entrenador) {
                         text = entrenador.especialidad,
                         color = PrimaryGreen,
                         fontSize = 14.sp,
-                        fontWeight = FontWeight.Medium
+                        style = MaterialTheme.typography.titleMedium,
                     )
 
                     Spacer(modifier = Modifier.height(2.dp))
@@ -223,7 +223,8 @@ fun EntrenadorCard(entrenador: Entrenador) {
                     Text(
                         text = entrenador.experiencia,
                         color = TextSecondary,
-                        fontSize = 12.sp
+                        fontSize = 12.sp,
+                        style = MaterialTheme.typography.titleMedium,
                     )
 
                     // Calificación
@@ -242,7 +243,7 @@ fun EntrenadorCard(entrenador: Entrenador) {
                             text = "${entrenador.calificacion}",
                             color = TextPrimary,
                             fontSize = 14.sp,
-                            fontWeight = FontWeight.Medium
+                            style = MaterialTheme.typography.titleMedium,
                         )
                     }
                 }
@@ -263,7 +264,7 @@ fun EntrenadorCard(entrenador: Entrenador) {
                 text = "Cualidades:",
                 color = TextPrimary,
                 fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
+                style = MaterialTheme.typography.displaySmall,
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -311,7 +312,7 @@ fun EntrenadorCard(entrenador: Entrenador) {
                 Text(
                     text = "Seleccionar Entrenador",
                     color = TextOnPrimary,
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.titleMedium,
                 )
             }
         }
@@ -333,7 +334,7 @@ fun CualidadChip(cualidad: String) {
             modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
             color = PrimaryGreen,
             fontSize = 12.sp,
-            fontWeight = FontWeight.Medium
+            style = MaterialTheme.typography.titleMedium,
         )
     }
 }

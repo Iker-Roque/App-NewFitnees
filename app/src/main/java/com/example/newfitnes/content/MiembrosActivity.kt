@@ -65,7 +65,7 @@ fun MiembrosScreen(
                         Text(
                             "Miembros",
                             fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelMedium,
                             color = TextPrimary
                         )
                     }
@@ -103,7 +103,7 @@ fun MiembrosScreen(
                 text = "Pantalla de Miembros",
                 color = TextPrimary,
                 fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
+                style = MaterialTheme.typography.labelMedium,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -111,6 +111,7 @@ fun MiembrosScreen(
             Text(
                 text = "Aquí irá el diseño para gestionar miembros",
                 color = TextSecondary,
+                style = MaterialTheme.typography.titleLarge,
                 fontSize = 16.sp
             )
         }

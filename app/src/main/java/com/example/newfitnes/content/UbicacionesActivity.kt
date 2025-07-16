@@ -58,7 +58,7 @@ class UbicacionesActivity : ComponentActivity() {
                                     Text(
                                         "Ubicaciones",
                                         fontSize = 20.sp,
-                                        fontWeight = FontWeight.Bold,
+                                        style = MaterialTheme.typography.labelMedium,
                                         color = TextPrimary
                                     )
                                 }

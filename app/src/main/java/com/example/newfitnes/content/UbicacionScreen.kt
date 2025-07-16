@@ -72,12 +72,13 @@ fun LoadingUbicacionesContent() {
             text = "Cargando ubicaciones...",
             color = TextPrimary,
             fontSize = 18.sp,
-            fontWeight = FontWeight.Medium
+            style = MaterialTheme.typography.labelLarge,
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "Por favor espera un momento",
             color = TextSecondary,
+            style = MaterialTheme.typography.titleLarge,
             fontSize = 14.sp
         )
     }
