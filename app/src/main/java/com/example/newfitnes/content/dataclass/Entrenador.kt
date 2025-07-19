@@ -1,4 +1,6 @@
-package com.example.newfitnes.content.DataClass
+package com.example.newfitnes.content.dataclass
+
+
 
 data class Entrenador(
     val id: Int,
@@ -7,5 +9,5 @@ data class Entrenador(
     val experiencia: String,
     val cualidades: List<String>,
     val calificacion: Float,
-    val imageRes: Int? = null // Usaremos null para usar icono por defecto
+    val imagenResId: Int? = null
 )

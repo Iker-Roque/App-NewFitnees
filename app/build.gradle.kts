@@ -71,6 +71,9 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
 
+    //imagen
+
+
     //implementacion de google
 
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")

@@ -96,7 +96,7 @@ fun GreetingPreview3() {
         Surface(
             color = BackgroundDark
         ) {
-            // Aquí iría tu UbicacionScreen con los colores aplicados
+           UbicacionScreen()
         }
     }
 }

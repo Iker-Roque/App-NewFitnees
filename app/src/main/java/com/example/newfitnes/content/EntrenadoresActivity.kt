@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -21,12 +22,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.newfitnes.content.DataClass.*
+import com.example.newfitnes.R // Asegúrate de importar R
+import com.example.newfitnes.content.dataclass.*
 import com.example.newfitnes.content.ui.theme.NewfitnesTheme
 import com.example.newfitnes.content.ui.theme.*
 
@@ -53,7 +55,7 @@ class EntrenadoresActivity : ComponentActivity() {
 fun EntrenadoresScreen(
     onBackClick: () -> Unit = {}
 ) {
-    // Lista de entrenadores de ejemplo
+    // Lista de entrenadores de ejemplo con imágenes
     val entrenadores = remember {
         listOf(
             Entrenador(
@@ -62,7 +64,8 @@ fun EntrenadoresScreen(
                 especialidad = "Entrenamiento Funcional",
                 experiencia = "5 años de experiencia",
                 cualidades = listOf("Intensivo", "Motivador", "Disciplinado", "Profesional"),
-                calificacion = 4.8f
+                calificacion = 4.8f,
+                imagenResId = R.drawable.img // Agrega esta imagen a res/drawable
             ),
             Entrenador(
                 id = 2,
@@ -70,7 +73,8 @@ fun EntrenadoresScreen(
                 especialidad = "Yoga y Pilates",
                 experiencia = "7 años de experiencia",
                 cualidades = listOf("Amable", "Paciente", "Flexible", "Comprensiva"),
-                calificacion = 4.9f
+                calificacion = 4.9f,
+                imagenResId = R.drawable.img3 // Agrega esta imagen a res/drawable
             ),
             Entrenador(
                 id = 3,
@@ -78,15 +82,17 @@ fun EntrenadoresScreen(
                 especialidad = "Musculación",
                 experiencia = "3 años de experiencia",
                 cualidades = listOf("Intensivo", "Técnico", "Exigente", "Resultados"),
-                calificacion = 4.6f
+                calificacion = 4.6f,
+                imagenResId = R.drawable.img2 // Agrega esta imagen a res/drawable
             ),
             Entrenador(
                 id = 4,
-                nombre = "Sofia Ruiz",
+                nombre = "Alex Cruz",
                 especialidad = "Cardio y Fitness",
                 experiencia = "4 años de experiencia",
                 cualidades = listOf("Energética", "Amable", "Divertida", "Motivadora"),
-                calificacion = 4.7f
+                calificacion = 4.7f,
+                imagenResId = R.drawable.img1 // Agrega esta imagen a res/drawable
             )
         )
     }
@@ -173,27 +179,40 @@ fun EntrenadorCard(entrenador: Entrenador) {
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Imagen del entrenador (usando icono por defecto)
-                Box(
-                    modifier = Modifier
-                        .size(80.dp)
-                        .clip(CircleShape)
-                        .background(
-                            Brush.radialGradient(
-                                colors = listOf(
-                                    PrimaryGreen,
-                                    PrimaryGreen.copy(alpha = 0.8f)
-                                )
-                            )
-                        ),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        Icons.Filled.Person,
-                        contentDescription = "Foto del entrenador",
-                        tint = TextOnPrimary,
-                        modifier = Modifier.size(40.dp)
+                // Imagen del entrenador
+                if (entrenador.imagenResId != null) {
+                    // Muestra la imagen si existe
+                    Image(
+                        painter = painterResource(id = entrenador.imagenResId),
+                        contentDescription = "Foto de ${entrenador.nombre}",
+                        modifier = Modifier
+                            .size(80.dp)
+                            .clip(CircleShape),
+                        contentScale = ContentScale.Crop
                     )
+                } else {
+                    // Muestra el ícono por defecto si no hay imagen
+                    Box(
+                        modifier = Modifier
+                            .size(80.dp)
+                            .clip(CircleShape)
+                            .background(
+                                Brush.radialGradient(
+                                    colors = listOf(
+                                        PrimaryGreen,
+                                        PrimaryGreen.copy(alpha = 0.8f)
+                                    )
+                                )
+                            ),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            Icons.Filled.Person,
+                            contentDescription = "Foto del entrenador",
+                            tint = TextOnPrimary,
+                            modifier = Modifier.size(40.dp)
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.width(16.dp))
