@@ -1,7 +1,5 @@
 package com.example.newfitnes.content.dataclass
 
-
-
 data class Entrenador(
     val id: Int,
     val nombre: String,
