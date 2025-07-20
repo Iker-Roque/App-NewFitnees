@@ -81,12 +81,7 @@ class HomeActivity : ComponentActivity() {
     }
 }
 
-// Data class para los elementos del menú
 
-
-
-
-// Composable principal extraído para el preview
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 
@@ -141,7 +136,7 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxSize()
                 )
 
-                // Overlay with welcome text
+
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -193,7 +188,7 @@ fun HomeScreen(
     }
 }
 
-// Composable para cada card del menú
+
 @Composable
 fun MenuCard(
     menuItem: MenuItem,

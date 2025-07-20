@@ -20,12 +20,12 @@ fun getMenuItems() = listOf(
     MenuItem("Suscripciones", Icons.Default.CardMembership, "Membresías VIP"),
     MenuItem("Entrenamientos", Icons.Default.FitnessCenter, "Ejercicios y Rutinas"),
     MenuItem("Usuario", Icons.Default.Person, "Perfil de Usuario"),
-    MenuItem("Rutinas", Icons.Default.Star, "Rutinas Personalizadas"),
-    MenuItem("Sucursales", Icons.Default.MapsHomeWork, "Descubre nuestras Sucursales"),
+    MenuItem("Rutinas", Icons.Default.Star, "Elige un Rutina"),
+    MenuItem("Sucursales", Icons.Default.MapsHomeWork, "Nuevas Sucursales"),
     MenuItem("Nuevo apartado", Icons.Default.DeviceUnknown, "Sección en desarrollo"),
-    MenuItem("Nuevo apartado", Icons.Default.Info, "Sección en desarrollo"),
-    MenuItem("Nuevo apartado", Icons.Default.Info, "Sección en desarrollo"),
-    MenuItem("Nuevo apartado", Icons.Default.Info, "Sección en desarrollo"),
+    MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
+    MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
+    MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
 
 
 )

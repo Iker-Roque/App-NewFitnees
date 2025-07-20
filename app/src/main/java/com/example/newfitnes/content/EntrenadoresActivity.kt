@@ -42,7 +42,7 @@ class EntrenadoresActivity : ComponentActivity() {
             NewfitnesTheme  {
                 EntrenadoresScreen(
                     onBackClick = {
-                        finish() // Regresa a la pantalla anterior
+                        finish()
                     }
                 )
             }

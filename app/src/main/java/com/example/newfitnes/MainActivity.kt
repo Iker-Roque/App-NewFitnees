@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.sp
 import com.example.newfitnes.content.ui.theme.*
 import com.example.newfitnes.content.ui.theme.NewfitnesTheme
 
-// MainActivity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -159,10 +158,9 @@ fun ActivationScreen(
                 )
             }
 
-            // Spacer para balancear el layout
-            Spacer(modifier = Modifier.weight(1.5f))
 
-            // Texto de copyright en la parte inferior
+            Spacer(modifier = Modifier.weight(1.5f))
+            
             Text(
                 text = "© 2024 NewFitnes - Todos los derechos reservados",
                 style = MaterialTheme.typography.titleLarge,
