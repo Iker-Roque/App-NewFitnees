@@ -17,7 +17,7 @@ class UbicacionViewModel(private val api: ApiServices) : ViewModel() {
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> get() = _error
 
-    // AGREGAR EL ESTADO DE LOADING
+
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> get() = _isLoading
 
