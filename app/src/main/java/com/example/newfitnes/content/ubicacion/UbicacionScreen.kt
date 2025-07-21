@@ -19,7 +19,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.example.newfitnes.api.Ubicacion
 import com.example.newfitnes.content.MapaActivity
-import com.example.newfitnes.content.ubicacion.UbicacionViewModel
 import com.example.newfitnes.content.ui.theme.*
 
 
@@ -160,8 +159,8 @@ fun UbicacionScreen(ubicacionViewModel: UbicacionViewModel = viewModel()) {
                         putExtra("gym_name", ubicacion.nombre)
                         putExtra("gym_address", ubicacion.descripcion) // o ubicacion.direccion si existe
                         // Ajusta estas propiedades según tu modelo Ubicacion
-                        putExtra("gym_latitude", ubicacion.latitud ?: 0.0)
-                        putExtra("gym_longitude", ubicacion.longitud ?: 0.0)
+                        putExtra("gym_latitude", ubicacion.latitud)
+                        putExtra("gym_longitude", ubicacion.longitud)
                     }
                     context.startActivity(intent)
                 }
