@@ -34,7 +34,9 @@ class SuscripcionActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewfitnesTheme {
+
                 SuscripcionScreen()
+
             }
         }
     }

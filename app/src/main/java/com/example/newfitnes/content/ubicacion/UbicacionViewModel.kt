@@ -1,4 +1,4 @@
-package com.example.newfitnes.content
+package com.example.newfitnes.content.ubicacion
 
 import androidx.lifecycle.ViewModel
 import com.example.newfitnes.api.ApiServices

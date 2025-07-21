@@ -1,4 +1,4 @@
-package com.example.newfitnes.content
+package com.example.newfitnes.content.ubicacion
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,11 +12,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newfitnes.api.ApiServices
+import com.example.newfitnes.content.ubicacion.UbicacionViewModel
 import com.example.newfitnes.content.ui.theme.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -87,7 +87,10 @@ class UbicacionesActivity : ComponentActivity() {
             }
         }
     }
+
 }
+
+
 
 @Preview(showBackground = true, backgroundColor = 0xFF1A1A1A)
 @Composable
@@ -96,7 +99,7 @@ fun GreetingPreview3() {
         Surface(
             color = BackgroundDark
         ) {
-           UbicacionScreen()
+            UbicacionScreen()
         }
     }
 }

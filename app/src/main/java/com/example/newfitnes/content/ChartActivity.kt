@@ -52,7 +52,7 @@ class ChartActivity : ComponentActivity() {
             LaunchedEffect(Unit) {
                 userDao.getAllUsers().collect { users ->
                     userList.value = users
-                    // Crear datos para la gráfica - usando duración por usuario
+
                     chartData.value = users.map { user ->
                         ChartDataItem(
                             label = user.name,
@@ -186,8 +186,8 @@ fun HorizontalBarChart(
         val canvasWidth = size.width
         val canvasHeight = size.height
         val barHeight = (canvasHeight - 40.dp.toPx()) / data.size
-        val maxBarWidth = canvasWidth * 0.6f // 60% del ancho para las barras
-        val labelWidth = canvasWidth * 0.3f // 30% del ancho para las etiquetas
+        val maxBarWidth = canvasWidth * 0.6f
+        val labelWidth = canvasWidth * 0.3f
 
         data.forEachIndexed { index, item ->
             val barWidth = (item.value / maxValue) * maxBarWidth
