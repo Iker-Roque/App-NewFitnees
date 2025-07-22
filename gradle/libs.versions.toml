@@ -1,5 +1,6 @@
 [versions]
 agp = "8.10.1"
+cloudinaryAndroid = "2.8.0"
 coilCompose = "2.4.0"
 converterGson = "2.9.0"
 kotlin = "2.0.21"
@@ -18,11 +19,14 @@ roomCompiler = "2.7.1"
 roomRuntimeAndroid = "2.7.1"
 appcompat = "1.7.1"
 carUiLib = "2.6.0"
+composeMaterial3 = "1.5.0-beta06"
+roomExternalAntlr = "2.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+cloudinary-android = { module = "com.cloudinary:cloudinary-android", version.ref = "cloudinaryAndroid" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -44,6 +48,8 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 car-ui-lib = { group = "com.android.car.ui", name = "car-ui-lib", version.ref = "carUiLib" }
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-compose-material3 = { group = "androidx.wear.compose", name = "compose-material3", version.ref = "composeMaterial3" }
+androidx-room-external-antlr = { group = "androidx.room", name = "room-external-antlr", version.ref = "roomExternalAntlr" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

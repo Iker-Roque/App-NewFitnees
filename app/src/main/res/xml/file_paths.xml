@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Directorio interno de la app para archivos temporales -->
+    <files-path
+        name="internal_files"
+        path="." />
+
+    <!-- Directorio externo de la app -->
+    <external-files-path
+        name="external_files"
+        path="." />
+
+    <!-- Directorio de Pictures público (si necesitas acceso) -->
+    <external-files-path
+        name="camera_images"
+        path="Pictures/"/>
+
+    <!-- Cache interno -->
+    <cache-path
+        name="cache_images"
+        path="/"/>
+
+    <external-path
+        name="external_files"
+        path="."/>
+
+    <!-- Cache externo -->
+    <external-cache-path
+        name="external_cache"
+        path="." />
+</paths>

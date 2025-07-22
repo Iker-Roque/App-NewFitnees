@@ -10,6 +10,7 @@ import com.example.newfitnes.R
 
 // 1. Define la familia de fuentes Poppins
 val Poppins = FontFamily(
+    Font(R.font.poppins_light, FontWeight.Light),
     Font(R.font.poppins_regular, FontWeight.Normal),
     Font(R.font.poppins_medium, FontWeight.Medium),
     Font(R.font.poppins_semibold, FontWeight.SemiBold),
@@ -20,10 +21,17 @@ val Poppins = FontFamily(
 // 2. Define estilos con esa fuente
 val Typography: Typography
     get() = Typography(
+
+        bodySmall = TextStyle(
+            fontFamily = Poppins,
+            fontWeight = FontWeight.Light,
+            fontSize = 10.sp
+        ),
+
         bodyLarge = TextStyle(
             fontFamily = Poppins,
             fontWeight = FontWeight.Normal,
-            fontSize = 16.sp
+            fontSize = 14.sp
         ),
         displaySmall = TextStyle(
             fontFamily = Poppins,

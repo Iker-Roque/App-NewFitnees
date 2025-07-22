@@ -16,4 +16,7 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_mapa">MapaActivity</string>
     <string name="title_activity_chart">ChartActivity</string>
+    <string name="title_activity_extras">ExtrasActivity</string>
+    <string name="title_activity_cloudinary">cloudinaryActivity</string>
+    <string name="title_activity_image_upload">ImageUploadActivity</string>
 </resources>

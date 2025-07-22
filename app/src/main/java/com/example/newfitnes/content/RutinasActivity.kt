@@ -162,8 +162,6 @@ class RutinasActivity : ComponentActivity() {
                                     }
                                 )
 
-
-
                                 Divider(color = TextSecondary.copy(alpha = 0.3f))
 
                                 DropdownMenuItem(

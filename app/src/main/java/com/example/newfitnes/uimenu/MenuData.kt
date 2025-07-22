@@ -22,8 +22,8 @@ fun getMenuItems() = listOf(
     MenuItem("Usuario", Icons.Default.Person, "Perfil de Usuario"),
     MenuItem("Rutinas", Icons.Default.Star, "Elige un Rutina"),
     MenuItem("Sucursales", Icons.Default.MapsHomeWork, "Nuevas Sucursales"),
-    MenuItem("Nuevo apartado", Icons.Default.DeviceUnknown, "Sección en desarrollo"),
-    MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
+    MenuItem("Nuevo Funcion", Icons.Default.Done, "Extras"),
+    MenuItem("Claudinary", Icons.Default.CloudQueue, "Sube tus Imagenes"),
     MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
     MenuItem("Nuevo apartado", Icons.Default.Info, "Proximo"),
 

@@ -42,7 +42,7 @@ android {
 
 
 dependencies {
-
+    implementation(libs.cloudinary.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.androidx.room.runtime.android)
     implementation(libs.androidx.appcompat)
     implementation(libs.car.ui.lib)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.room.external.antlr)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -86,6 +88,19 @@ dependencies {
     implementation ("com.google.android.gms:play-services-maps:19.2.0")
     implementation ("com.google.android.gms:play-services-location:21.3.0")
 
+    //Nueva implementacion
+
+    // Mostrar imágenes desde Cloudinary
+    implementation("com.cloudinary:cloudinary-android:2.6.0")
+
+    implementation("androidx.documentfile:documentfile:1.1.0")
+    implementation("androidx.core:core:1.12.0") // Ya la tienes, solo asegúrate de usar correctamente FileProvider en el manifest
+
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+
+
+    implementation("androidx.documentfile:documentfile:1.0.1")
 
 
 

@@ -39,6 +39,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.example.newfitnes.cloudinary.ImageUploadActivity
 import com.example.newfitnes.content.SuscripcionActivity
 import com.example.newfitnes.content.EntrenadoresActivity
 import com.example.newfitnes.content.RutinasActivity
@@ -46,6 +47,7 @@ import com.example.newfitnes.content.ubicacion.UbicacionesActivity
 import com.example.newfitnes.content.UserInsertActivity
 import com.example.newfitnes.content.UsuarioActivity
 import com.example.newfitnes.content.ui.theme.*
+import com.example.newfitnes.nuevafuncion.ExtrasActivity
 import com.example.newfitnes.ui.theme.ui.theme.NewfitnesTheme
 import com.example.newfitnes.uimenu.MenuItem
 import com.example.newfitnes.uimenu.getMenuItems
@@ -75,6 +77,8 @@ class HomeActivity : ComponentActivity() {
             3 -> startActivity(Intent(this, UsuarioActivity::class.java))
             4 -> startActivity(Intent(this, UserInsertActivity::class.java))
             5 -> startActivity(Intent(this, UbicacionesActivity::class.java))
+            6 -> startActivity(Intent(this, ExtrasActivity::class.java))
+            7 -> startActivity(Intent(this, ImageUploadActivity::class.java))
 
         }
     }

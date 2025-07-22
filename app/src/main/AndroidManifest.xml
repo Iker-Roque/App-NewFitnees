@@ -2,13 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
 
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +34,37 @@
         android:theme="@style/Theme.Newfitnes"
         tools:targetApi="31">
         <activity
-            android:name=".content.MapaActivity"
+            android:name=".cloudinary.ImageUploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_image_upload"
+            android:theme="@style/Theme.Newfitnes" />
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCDekYSNDUkm6WZoeBtKc8tuOD0hIQ_gnQ" />
+
+        <activity
+            android:name=".nuevafuncion.ExtrasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_extras"
+            android:theme="@style/Theme.Newfitnes" />
+        <activity
+            android:name=".content.ubicacion.MapaActivity"
             android:exported="false"
             android:label="@string/title_activity_mapa"
             android:theme="@style/Theme.Newfitnes" />
@@ -81,13 +127,8 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Newfitnes">
-            <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyCcNUVe06qM5prDGyMfmR21yjvshbu_ybI" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

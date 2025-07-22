@@ -1,4 +1,4 @@
-package com.example.newfitnes.content
+package com.example.newfitnes.content.ubicacion
 
 import android.content.Intent
 import android.net.Uri
